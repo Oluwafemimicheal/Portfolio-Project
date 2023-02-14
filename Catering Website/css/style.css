@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: green;
+    --secondary-color: lightgreen;
+    --text-color: gray;
+    --header-text: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+a:hover {
+    color: rgb(63, 63, 63);
+    transform: translateY(-20%);
+    border-bottom: 2px solid white;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 0% 10px;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    margin: 10px 0%;
+    padding: 5px 8px;
+    font-size: 15px;
+    font-weight: lighter;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+p {
+    margin: 10px 0%;
+}
+
+button:active {
+    background-color: gray;
+    color: white;
+}
+
+.active .logo-box {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.header-top.active {
+    box-shadow: 0 0 4px 0 rgb(17, 17, 17);
+    background-color: var(--primary-color);
+    animation: nav 0.5s linear;
+}
+
+@keyframes nav {
+    from {
+        transform: translateY(-100%);
+    }
+}
+
+.header-top {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    color: black;
+    z-index: 999;
+}
+
+.header-top .top-overlay {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 99;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+.header-top nav a:hover {
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.header-top.active nav a:hover {
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.social-media i {
+    margin: 0 10px;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.social-media i:hover {
+    transform: scale(1.3);
+}
+
+.home {
+    min-height: 100vh;
+    background: url('../image/istockphoto-650647718-612x612.jpg') no-repeat;
+    background-size: 100%;
+}
+
+.home .overlay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.854);
+    height: 100vh;
+    color: white;
+}
+
+.home .overlay .text .logo-box {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 90px;
+}
+
+.home .overlay .text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+.home .overlay .text p {
+    width: 100%;
+    margin: auto;
+    color: rgb(255, 255, 255);
+}
+
+.home .overlay .text button {
+    color: white;
+    border: 2px solid white;
+    font-weight: 600;
+}
+
+.home .overlay .text button:active {
+    background-color: green;
+    color: white;
+    border-color: green;
+}
+
+
+/* Categories */
+
+section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    min-width: 1300px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.service .service-box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.service-box .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.service-box .box:hover {
+    transform: scale(1.1);
+}
+
+.service-box .box .text {
+    padding: 0% 5px;
+}
+
+.service-box .box .text p {
+    margin: 2px 0%;
+    font-size: 12px;
+    text-align: left;
+}
+
+.service-box .box .imgbx img {
+    width: 150%;
+}
+
+
+/* end categories */
+
+
+/* About Us */
+
+.about article {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 10%;
+    width: 80%;
+    font-size: 25px;
+}
+
+.about article .imgbx {
+    width: 500px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about article .imgbx img {
+    width: 75%;
+}
+
+.about article .text h1 {
+    color: green;
+}
+
+.about article .text p {
+    width: 80%;
+    font-size: 20px;
+}
+
+.about article button {
+    color: black;
+    border: 2px solid var(--primary-color);
+}
+
+
+/* end about */
+
+.catering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(white, white, rgb(109, 255, 109));
+    padding: 50px;
+    overflow: hidden;
+}
+
+.catering h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: green;
+}
+
+.catering .item-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.catering .item-box .box {
+    width: 550px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0 rgb(63, 63, 63);
+    transition: all 0.2s ease;
+    transform: scale(0.98);
+}
+
+.catering .item-box .box:hover {
+    transform: scale(1);
+    box-shadow: 0 0 4px 0 rgb(63, 63, 63);
+}
+
+.catering .item-box .box .image {
+    width: 400px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.value {
+    padding: 30px;
+    background: linear-gradient(rgb(109, 255, 109), white);
+    overflow: hidden;
+}
+
+.value .item-box {
+    width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.value .item-box .box {
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 185, 185, 0.556);
+    padding: 30px;
+}
+
+.value .item-box .box:nth-child(2) {
+    background-color: #58e98d93;
+}
+
+
+/* Client css */
+
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.client .item-box {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+    overflow: hidden;
+}
+
+.client .item-box .box {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.client .item-box .box img {
+    width: 150%;
+}
+
+.client h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    color: green;
+}
+
+.client p {
+    width: 40%;
+    text-align: center;
+}
+
+
+/* Footer css */
+
+footer {
+    position: relative;
+    background-color: green;
+    padding: 5px 30px;
+    height: auto;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.footer-container .logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container .logo .logo-box {
+    width: 120px;
+    height: 120px;
+}
+
+.footer-container li {
+    padding-bottom: 5px;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.footer-container li:hover {
+    text-decoration: underline;
+}
+
+.footer-container ul {
+    display: block;
+}
+
+.footer-container .weekevent,
+.services,
+.showcase,
+.nav,
+.logo {
+    margin-top: 20px;
+}
+
+footer .social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0%;
+    border-top: 2px solid white;
+    color: white;
+}
+
+footer .social-media i {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .social-media .item {
+    display: flex;
+}
+
+footer .social-media i:hover {
+    background-color: rgb(255, 255, 255);
+    color: green;
+}
